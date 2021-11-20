@@ -41,8 +41,6 @@ def time_reader(filename):
     date_list = re.findall(regexp, match_list)
 
     access_logs.close()
-    print(date_list)
-    print(len(date_list))
     return(date_list)
 
 
@@ -91,16 +89,9 @@ def write_csv(ip_address_list, access_time_list, http_requests ,browser):
 
     print("Write Successful...")
     
+    
+    
+    
+    
 if __name__ == "__main__":  
     write_csv(ip_reader("access_log"), time_reader("access_log"), request_reader("access_log") ,browser_reader("access_log"))
-
-
-
-#Implemented Counter function before I realised it already existed as "from collection import Counter"
-
- # count_dict = {}
-   # for log in request_list:
-    #     if log not in count_dict:
-    #         count_dict[log] = 1
-    #     else:
-    #         count_dict[log] += 1
