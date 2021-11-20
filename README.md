@@ -1,5 +1,5 @@
 # apache2-access-log-parser
-Python script that parses through apache2 access_log file, extracts information such as:
+Python script that parses through *apache2* **access_log** files, extracts information such as:
 
 * IP address
 * Access Time
