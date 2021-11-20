@@ -22,7 +22,6 @@ def ip_reader(filename):
 
 
 
-    access_log.close() #close file
     return(ips_list)
 
 
@@ -59,7 +58,6 @@ def request_reader(filename):
         regexp = r"(?<=POST )|(?<=GET ).*?(?= HTTP)"
         request_list = re.findall(regexp, match_list)     
 
-        access_logs.close()
         return request_list
 
         
@@ -78,7 +76,6 @@ def browser_reader(filename):
         all_browsers = re.findall(regexp, match_list)
 
 
-        access_logs.close()
         return all_browsers
     
             
@@ -91,7 +88,7 @@ def write_csv(ip_address_list, access_time_list, http_requests ,browser):
 
         for index in range(0, len(browser)):
             writer.writerow((ip_address_list[index], access_time_list[index], http_requests[index], browser[index]))
-    output.close()
+
     print("Write Successful...")
     
 if __name__ == "__main__":  
