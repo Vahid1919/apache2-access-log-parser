@@ -40,7 +40,6 @@ def time_reader(filename):
     
     date_list = re.findall(regexp, match_list)
 
-    access_logs.close()
     return(date_list)
 
 
